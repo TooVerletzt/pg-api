@@ -14,5 +14,8 @@ jobs:
           node-version: 20
       - run: echo 'hello world ...'
       - run: ls -la
-      - run: docker build -t abrahamCast/pg-restapi .
+      - run: touch .env
+      - run: echo 'DV_DATABASE_URL:'
+      - run: echo ' '
+      - run: docker build -t abrahamcast/pg-restapi .
       - run: docker images
